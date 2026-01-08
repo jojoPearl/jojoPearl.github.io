@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bochun Jia | Research & Engineering</title>
+  <meta name="description" content="Bochun Jia — Multimodal CV, Generative AI, LLMs. Projects and resume." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f1730; --card2:#0d152b; --text:#e8eefc; --muted:#a9b6d1;
+      --line:#243053; --accent:#7aa7ff; --accent2:#9bffd1;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background: radial-gradient(1200px 800px at 20% -10%, rgba(122,167,255,.18), transparent 55%),
+                        radial-gradient(900px 700px at 90% 10%, rgba(155,255,209,.12), transparent 60%),
+                        var(--bg);
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:52px 18px 70px}
+    .top{
+      display:flex; gap:18px; justify-content:space-between; align-items:flex-start; flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .name{font-size:38px; line-height:1.1; margin:0 0 10px}
+    .subtitle{color:var(--muted); margin:0; max-width:62ch}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(15,23,48,.65);
+      backdrop-filter: blur(8px);
+    }
+    .pill svg{opacity:.9}
+    .grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; margin-top:16px}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background: linear-gradient(180deg, rgba(15,23,48,.92), rgba(13,21,43,.92));
+      border:1px solid var(--line); border-radius:18px; padding:18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{font-size:14px; letter-spacing:.18em; text-transform:uppercase; color:#cfe0ff; margin:0 0 12px}
+    .card h3{margin:0 0 6px; font-size:18px}
+    .muted{color:var(--muted)}
+    .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      font-size:12px; color:#cfe0ff;
+      border:1px solid rgba(36,48,83,.95);
+      padding:6px 10px; border-radius:999px; background: rgba(10,16,32,.35);
+    }
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 640px){ .two-col{grid-template-columns:1fr} }
+    .list{margin:10px 0 0; padding-left:18px}
+    .list li{margin:6px 0}
+    .project{
+      display:flex; flex-direction:column; gap:10px;
+      padding:14px; border:1px solid rgba(36,48,83,.95); border-radius:16px;
+      background: rgba(10,16,32,.35);
+    }
+    .projtop{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(36,48,83,.95);
+      background: rgba(15,23,48,.55);
+    }
+    .btn:hover{background: rgba(15,23,48,.85); text-decoration:none}
+    .footer{margin-top:18px; color:var(--muted); font-size:13px}
+    .divider{height:1px; background:rgba(36,48,83,.85); margin:14px 0}
+    .small{font-size:13px}
+    .kpi{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .kpi .tag{border-color: rgba(122,167,255,.35)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div>
+        <h1 class="name">Bochun Jia</h1>
+        <p class="subtitle">
+          Research interests: <b>Multimodal Computer Vision</b>, <b>Generative AI</b> (Diffusion/DiT/Flow Matching),
+          and <b>LLMs</b>. Building robust pipelines with strong engineering discipline (MLOps, data governance).
+        </p>
+
+        <div class="pillrow">
+          <span class="pill" title="Phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L9.91 10.91a16 16 0 0 0 3.18 3.18l1.72-1.27a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92Z" stroke="#cfe0ff" stroke-width="1.6"/></svg>
+            +33 743694358
+          </span>
+          <a class="pill" href="mailto:bochun.jia@ip-paris.fr" title="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4Z" stroke="#cfe0ff" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="#cfe0ff" stroke-width="1.6"/></svg>
+            bochun.jia@ip-paris.fr
+          </a>
+          <a class="pill" href="https://github.com/jojoPearl" target="_blank" rel="noreferrer" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.5c0-1 .1-1.4-.5-2 1.7-.2 3.5-.8 3.5-4a3.1 3.1 0 0 0-.9-2.2 2.9 2.9 0 0 0-.1-2.2s-.7-.2-2.3.9a7.9 7.9 0 0 0-4.2 0C7.6 6.4 6.9 6.6 6.9 6.6a2.9 2.9 0 0 0-.1 2.2A3.1 3.1 0 0 0 6 11c0 3.2 1.8 3.8 3.5 4-.4.4-.5.9-.5 1.7V22" stroke="#cfe0ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+            github.com/jojoPearl
+          </a>
+
+          <!-- Optional: add resume.pdf in repo root -->
+          <a class="pill" href="resume.pdf" target="_blank" rel="noreferrer" title="Resume PDF (optional)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" stroke="#cfe0ff" stroke-width="1.6"/><path d="M14 2v6h6" stroke="#cfe0ff" stroke-width="1.6"/></svg>
+            Resume PDF
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Left: Projects -->
+      <div class="card">
+        <h2>Featured Projects</h2>
+
+        <div class="project">
+          <div class="projtop">
+            <div>
+              <h3>RAE_MIX — Latent Feature Fusion for Semantic Object Insertion</h3>
+              <div class="muted small">
+                CLIPSeg semantic masking + dual-stage scaling (pixel/latent) + latent soft blending; designed for diffusion-based harmonization.
+              </div>
+            </div>
+            <div class="btnrow">
+              <a class="btn" href="https://github.com/jojoPearl/RAE_MIX" target="_blank" rel="noreferrer">
+                Repo ↗
+              </a>
+            </div>
+          </div>
+          <div class="tagrow">
+            <span class="tag">CLIPSeg</span>
+            <span class="tag">RAE</span>
+            <span class="tag">Latent Fusion</span>
+            <span class="tag">DiT / Diffusion</span>
+            <span class="tag">Flow Matching</span>
+            <span class="tag">PyTorch AMP</span>
+          </div>
+          <ul class="list small muted">
+            <li>Text-guided object extraction via CLIPSeg and binary mask post-processing.</li>
+            <li>Dual-stage resizing: encoder-stable pixel scaling + latent interpolation scaling.</li>
+            <li>Engineering: warnings suppression (DINOv2/PyTorch CUDA), VRAM cleanup, mixed precision for reproducibility.</li>
+          </ul>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="project">
+          <div class="projtop">
+            <div>
+              <h3>Cycle-Consistency Reward in Style Transfer</h3>
+              <div class="muted small">
+                Reward-guided training objective for improving content preservation and stylistic consistency under cycle constraints.
+              </div>
+            </div>
+            <div class="btnrow">
+              <a class="btn" href="https://github.com/jojoPearl/cycle-consistency-reward-in-style-transfer" target="_blank" rel="noreferrer">
+                Repo ↗
+              </a>
+            </div>
+          </div>
+          <div class="tagrow">
+            <span class="tag">Style Transfer</span>
+            <span class="tag">Cycle Consistency</span>
+            <span class="tag">Reward Objective</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Research Interests</h2>
+        <div class="kpi">
+          <span class="tag">LLMs</span>
+          <span class="tag">Multimodal CV Integration</span>
+          <span class="tag">Generative AI (Diffusion/DiT)</span>
+          <span class="tag">NLP Foundations</span>
+        </div>
+
+      </div>
+
+      <!-- Right: Bio / Education / Experience -->
+      <div class="card">
+        <h2>Education</h2>
+        <div>
+          <b>Institut Polytechnique de Paris</b><br/>
+          <span class="muted small">DataAI — Data and Artificial Intelligence</span><br/>
+          <span class="muted small">Sep 2025 – Jul 2027 · France</span>
+        </div>
+        <div style="height:10px"></div>
+        <div>
+          <b>Northeastern University (China)</b><br/>
+          <span class="muted small">B.S. Information Management & Information System</span><br/>
+          <span class="muted small">Sep 2018 – Jul 2022 · China</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Experience</h2>
+        <div class="two-col">
+          <div>
+            <b>Citigroup (China) — Data Engineer</b><br/>
+            <span class="muted small">Data Infrastructure & MLOps Excellence</span><br/>
+            <span class="muted small">Jul 2023 – Jul 2025 · Shanghai</span>
+            <ul class="list small muted">
+              <li>Built immutable ML data lineage for auditability and model risk control.</li>
+              <li>Developed monitoring dashboards for drift detection and feature validation.</li>
+            </ul>
+          </div>
+          <div>
+            <b>Citigroup (China) — Software Engineer</b><br/>
+            <span class="muted small">Jul 2022 – Jul 2023 · Shanghai</span>
+            <ul class="list small muted">
+              <li>Led automated regulatory reporting system design and delivery (APAC).</li>
+              <li>Created internal tools: cost monitoring, diff reporting (Oracle/Hive), RPC modules.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <b>Intelligent Interactive Robot Designer</b><br/>
+        <span class="muted small">Mar 2023 – Sep 2023</span>
+        <ul class="list small muted">
+          <li>Speech detection (Raspberry Pi) + NLP understanding; vision via OV2640 camera; motion and decision logic via ESP32.</li>
+          <li>Awards: 3rd Prize (8th “Zhangjiang Cup” S&T Innovation Contest), Innovation Talent Competition Award.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Skills</h2>
+        <div class="tagrow">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span>
+          <span class="tag">Java</span><span class="tag">C++</span><span class="tag">Docker</span><span class="tag">Git</span>
+        </div>
+        <div class="tagrow" style="margin-top:8px">
+          <span class="tag">Transformers</span><span class="tag">CNN/RNN</span><span class="tag">GNN</span>
+          <span class="tag">Data Mining</span><span class="tag">MLOps</span>
+          <span class="tag">Vision-Language</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> Bochun Jia · Hosted on GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
