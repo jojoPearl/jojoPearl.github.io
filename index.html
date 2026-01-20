@@ -3,123 +3,162 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bochun Jia | Multimodal & Generative AI Research</title>
-  <meta name="description" content="Bochun Jia — Multimodal Computer Vision, Generative AI, Diffusion Models." />
+  <title>Bochun Jia | Diffusion & Multimodal Generative AI</title>
+  <meta name="description" content="Bochun Jia — Diffusion models, controllable image editing, multimodal vision–language grounding, and generative AI." />
+
+  <!-- Open Graph (nice preview when sharing) -->
+  <meta property="og:title" content="Bochun Jia | Diffusion & Multimodal Generative AI" />
+  <meta property="og:description" content="Research on controllable diffusion, latent-space image editing, and vision–language grounding." />
+  <meta property="og:type" content="website" />
 
   <style>
     :root{
       --bg:#f8f9fb;
       --card:#ffffff;
-      --text:#1f2937;
+      --text:#111827;
       --muted:#6b7280;
       --line:#e5e7eb;
       --accent:#2563eb;
       --accent2:#059669;
-      --shadow:0 6px 18px rgba(0,0,0,.08);
+      --shadow:0 8px 22px rgba(0,0,0,.08);
+      --shadow2:0 1px 2px rgba(0,0,0,.06);
+      --radius:18px;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       background:
-        radial-gradient(1200px 800px at 15% -10%, rgba(37,99,235,.08), transparent 55%),
-        radial-gradient(900px 700px at 90% 10%, rgba(5,150,105,.08), transparent 60%),
+        radial-gradient(1200px 800px at 15% -10%, rgba(37,99,235,.09), transparent 55%),
+        radial-gradient(900px 700px at 90% 10%, rgba(5,150,105,.09), transparent 60%),
         var(--bg);
       color:var(--text);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      line-height:1.6;
+      line-height:1.65;
     }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:980px;margin:0 auto;padding:52px 18px 72px}
-    .top{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:18px}
-    h1{font-size:40px;margin:0}
-    .subtitle{color:var(--muted);max-width:65ch}
-    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+    /* Top */
+    .top{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:18px;align-items:flex-start}
+    h1{font-size:42px;line-height:1.12;margin:0}
+    .subtitle{color:var(--muted);max-width:70ch;margin:10px 0 0}
+    .metaRow{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;align-items:center
+    }
     .pill{
+      display:inline-flex;align-items:center;gap:8px;
       padding:10px 14px;
       border:1px solid var(--line);
       border-radius:999px;
       background:#fff;
       color:var(--text);
       font-size:14px;
-      box-shadow:0 1px 2px rgba(0,0,0,.04);
+      box-shadow:var(--shadow2);
     }
+    .pill.primary{
+      border-color:rgba(37,99,235,.25);
+      background:linear-gradient(180deg, rgba(37,99,235,.09), rgba(37,99,235,.03));
+    }
+    .pill:hover{transform:translateY(-1px)}
+    .pill:active{transform:translateY(0)}
+
+    /* Layout */
     .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:20px}
     @media(max-width:900px){.grid{grid-template-columns:1fr}}
     .card{
       background:var(--card);
       border:1px solid var(--line);
-      border-radius:18px;
+      border-radius:var(--radius);
       padding:20px;
       box-shadow:var(--shadow);
     }
     h2{
-      font-size:13px;
-      letter-spacing:.16em;
+      font-size:12px;
+      letter-spacing:.18em;
       text-transform:uppercase;
       color:#4b5563;
       margin:0 0 12px;
     }
     h3{margin:0 0 6px;font-size:18px}
     .muted{color:var(--muted)}
-    ul{margin:8px 0 0;padding-left:18px}
-    li{margin:6px 0}
-    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#f1f5f9;
-    }
+    .divider{height:1px;background:var(--line);margin:16px 0}
+
+    /* Project blocks */
     .project{
       padding:16px;
       border:1px solid var(--line);
       border-radius:16px;
       background:#f9fafb;
     }
-    .projtop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .projtop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start}
     .btn{
-      padding:8px 12px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 12px;
       border:1px solid var(--line);
       border-radius:12px;
       background:#fff;
       font-size:14px;
+      box-shadow:var(--shadow2);
+      color:var(--text);
     }
-    .divider{height:1px;background:var(--line);margin:16px 0}
+    .btn:hover{border-color:rgba(37,99,235,.35)}
+    ul{margin:10px 0 0;padding-left:18px}
+    li{margin:6px 0}
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#f1f5f9;
+      color:#334155;
+    }
+
+    /* Side blocks */
+    .side p{margin:10px 0}
+    .k{font-weight:600}
+    .small{font-size:13px}
+
     footer{margin-top:28px;font-size:13px;color:var(--muted)}
+    .anchor{color:inherit}
   </style>
 </head>
 
 <body>
 <div class="wrap">
 
+  <!-- Header -->
   <div class="top">
     <div>
       <h1>Bochun Jia</h1>
       <p class="subtitle">
-        Researcher focused on <b>Multimodal Computer Vision</b> and
-        <b>Generative AI</b>, with an emphasis on diffusion models,
-        latent-space representation learning, and vision–language grounding.
+        I work on <b>controllable diffusion</b> and <b>multimodal generative modeling</b>,
+        with a focus on <b>latent-space image editing</b>, <b>semantic grounding</b>, and
+        evaluation for faithful edits.
       </p>
 
-      <div class="pillrow">
+      <div class="metaRow">
         <span class="pill">📍 Paris, France</span>
-        <a class="pill" href="mailto:bochun.jia@ip-paris.fr">Email</a>
-        <a class="pill" href="https://github.com/jojoPearl" target="_blank">GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/bochun-jia/" target="_blank">LinkedIn</a>
-        <a class="pill" href="resume.pdf" target="_blank">Resume PDF</a>
+        <a class="pill primary" href="#contact" aria-label="Jump to contact">Contact</a>
+        <a class="pill" href="mailto:bochun.jia@ip-paris.fr" aria-label="Email Bochun Jia">Email</a>
+        <a class="pill" href="https://jojoPearl.github.io" target="_blank" rel="noreferrer">Website</a>
+        <a class="pill" href="https://github.com/jojoPearl" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/bochun-jia/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="pill" href="./resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
       </div>
     </div>
   </div>
 
+  <!-- Research statement -->
   <div class="card">
     <h2>Research Statement</h2>
-    <p class="muted">
-      My research explores controllable generative modeling and multimodal representation learning.
-      I am particularly interested in latent-space manipulation, diffusion-based image generation,
-      and vision–language alignment. My goal is to design generative systems that are both
-      semantically interpretable and practically deployable.
+    <p class="muted" style="margin:0">
+      My research explores <b>semantic control</b> in diffusion models and <b>vision–language grounding</b>
+      for controllable image generation and editing. I am interested in (1) how controllability emerges
+      along diffusion trajectories, (2) compositional latent representations for stable editing, and
+      (3) evaluation protocols that measure edit fidelity, semantic accuracy, and consistency.
     </p>
   </div>
 
@@ -127,28 +166,29 @@
 
     <!-- Left -->
     <div class="card">
-      <h2>Featured Projects</h2>
+      <h2 id="works"><a class="anchor" href="#works">Selected Work</a></h2>
 
       <div class="project">
         <div class="projtop">
           <div>
             <h3>Semantic Object Insertion via Latent-Space Fusion</h3>
-            <p class="muted">
-              A diffusion-oriented framework for semantically inserting objects into scenes
-              using CLIP-based grounding and latent feature fusion.
+            <p class="muted" style="margin:0">
+              A diffusion-oriented pipeline for semantically inserting objects into scenes using
+              CLIP/CLIPSeg grounding, dual-stage scaling, and DiT + Flow Matching refinement.
             </p>
           </div>
-          <a class="btn" href="https://github.com/jojoPearl/RAE_MIX" target="_blank">Repo ↗</a>
+          <a class="btn" href="https://github.com/jojoPearl/RAE_MIX" target="_blank" rel="noreferrer">
+            Repo <span aria-hidden="true">↗</span>
+          </a>
         </div>
         <ul class="muted">
-          <li>CLIPSeg-based semantic extraction and text-guided spatial grounding.</li>
-          <li>Dual-stage scaling decoupling pixel normalization and latent resizing.</li>
-          <li>Latent-space soft blending followed by DiT + Flow Matching generation.</li>
+          <li>Text-guided object extraction and spatial grounding with <b>CLIP/CLIPSeg</b>.</li>
+          <li>Dual-stage scaling to preserve semantic and structural consistency during composition.</li>
+          <li>Latent blending followed by <b>DiT</b> refinement with <b>Flow Matching</b> (ODE noise control) to reduce artifacts.</li>
         </ul>
         <div class="tagrow">
-          <span class="tag">CLIPSeg</span><span class="tag">RAE</span>
-          <span class="tag">Diffusion</span><span class="tag">DiT</span>
-          <span class="tag">Vision–Language</span>
+          <span class="tag">Diffusion</span><span class="tag">DiT</span><span class="tag">Flow Matching</span>
+          <span class="tag">CLIPSeg</span><span class="tag">Latent Editing</span><span class="tag">VLM Grounding</span>
         </div>
       </div>
 
@@ -157,31 +197,60 @@
       <div class="project">
         <div class="projtop">
           <div>
-            <h3>Cycle-Consistency Reward in Style Transfer</h3>
-            <p class="muted">
-              Reward-driven optimization strategy to improve content preservation
-              under cyclic style transformation.
+            <h3>Cycle-Consistency Reward for Neural Style Transfer</h3>
+            <p class="muted" style="margin:0">
+              A reward-driven framework that improves content preservation and automates the content–style trade-off
+              using a cycle-consistency reward as training loss and Best-of-N selector.
             </p>
           </div>
-          <a class="btn" href="https://github.com/jojoPearl/cycle-consistency-reward-in-style-transfer" target="_blank">Repo ↗</a>
+          <a class="btn" href="https://github.com/jojoPearl/cycle-consistency-reward-in-style-transfer" target="_blank" rel="noreferrer">
+            Repo <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <ul class="muted">
+          <li>Cycle-consistency reward used as both <b>training-time loss</b> and <b>inference-time ranking</b>.</li>
+          <li>Validated across <b>AdaIN</b> and SDS-based style matching pipelines for stable optimization.</li>
+          <li>Combined <b>CycleReward</b> (content) + <b>SDS</b> (style) to distill diffusion-quality style into a feed-forward generator.</li>
+        </ul>
+        <div class="tagrow">
+          <span class="tag">Style Transfer</span><span class="tag">Reward Modeling</span><span class="tag">SDS</span>
+          <span class="tag">Best-of-N</span><span class="tag">Optimization</span>
         </div>
       </div>
 
       <div class="divider"></div>
 
-      
+      <div class="project">
+        <div class="projtop">
+          <div>
+            <h3>Ongoing: Text-Driven Latent-Space Editing & Evaluation</h3>
+            <p class="muted" style="margin:0">
+              Analyzing latent trajectories under text guidance to understand semantic control and to design evaluation
+              protocols for edit fidelity and consistency.
+            </p>
+          </div>
+          <a class="btn" href="#contact" aria-label="Contact for collaboration">
+            Collaborate
+          </a>
+        </div>
+        <div class="tagrow">
+          <span class="tag">Controllability</span><span class="tag">Evaluation</span><span class="tag">Latent Trajectories</span>
+          <span class="tag">Text Guidance</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- Right -->
-    <div class="card">
+    <div class="card side">
       <h2>Education</h2>
       <p>
-        <b>Institut Polytechnique de Paris</b><br/>
+        <span class="k">Institut Polytechnique de Paris</span><br/>
         DataAI — Data and Artificial Intelligence<br/>
-        <span class="muted">2025 – 2027 · France</span>
+        <span class="muted">2025 – 2027 (Expected) · France</span>
       </p>
       <p>
-        <b>Northeastern University (China)</b><br/>
+        <span class="k">Northeastern University (China)</span><br/>
         B.S. Information Management & Information System<br/>
         <span class="muted">2018 – 2022 · China</span>
       </p>
@@ -191,31 +260,33 @@
       <h2>Experience</h2>
       <ul class="muted">
         <li>
-          <b>Citigroup — Data Engineer</b><br/>
-          Built ML data lineage and monitoring systems for large-scale MLOps.
-        </li>
-        <li>
-          <b>Citigroup — Software Engineer</b><br/>
-          Led automated regulatory reporting systems across APAC.
+          <span class="k">Citigroup — Data Engineer / Software Engineer</span><br/>
+          Built large-scale distributed data pipelines, monitoring, and automation to support reliable ML workflows;
+          integrated AI-assisted tools for SQL translation and code generation.
+          <div class="small muted" style="margin-top:6px">Shanghai · 2022 – 2025</div>
         </li>
       </ul>
 
       <div class="divider"></div>
 
-      <h2>Awards</h2>
-      <ul class="muted">
-        <li>3rd Prize, 8th “Zhangjiang Cup” Science & Technology Innovation Contest</li>
-        <li>Innovation Talent Competition Award</li>
-      </ul>
-
-      <div class="divider"></div>
 
       <h2>Skills</h2>
       <div class="tagrow">
-        <span class="tag">Python</span><span class="tag">PyTorch</span>
-        <span class="tag">Diffusion Models</span><span class="tag">LLMs</span>
-        <span class="tag">Multimodal AI</span><span class="tag">MLOps</span>
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Diffusion</span>
+        <span class="tag">Vision–Language</span><span class="tag">Multimodal</span><span class="tag">MLOps</span>
+        <span class="tag">Spark/Hadoop</span>
       </div>
+
+      <div class="divider"></div>
+
+      <h2 id="contact"><a class="anchor" href="#contact">Contact</a></h2>
+      <p class="muted" style="margin:0">
+        I’m open to research collaborations and internships in diffusion / multimodal generative AI.
+      </p>
+      <p style="margin:10px 0 0">
+        <a class="btn" href="mailto:bochun.jia@ip-paris.fr">Email</a>
+        <a class="btn" href="https://github.com/jojoPearl" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
     </div>
 
   </div>
